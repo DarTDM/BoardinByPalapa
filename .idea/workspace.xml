@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="561e5441-a7b9-4b48-903e-c23e80be7207" name="Changes" comment="" />
+    <list default="true" id="561e5441-a7b9-4b48-903e-c23e80be7207" name="Changes" comment="Additional XML file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tubes/project/PenghuniController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tubes/project/PenghuniController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tubes/project/Penghuni.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tubes/project/Penghuni.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tubes/project/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tubes/project/stylesheet.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +24,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -28,28 +35,32 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="23mmgX9rJN8t1aUUJ8SCSMwVKZe" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/Helper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/tubes/project" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15234375" />
     <property name="project.structure.side.proportion" value="0.2674572" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Pus Kampus\Semester 3\Etc\KBT\src\main\resources\tubes\project" />
       <recent name="D:\Pus Kampus\Semester 3\Etc\KBT\src\main\java\Helper" />
       <recent name="D:\Pus Kampus\Semester 3\Etc\KBT\src\main\java" />
-      <recent name="D:\Pus Kampus\Semester 3\Etc\KBT\src\main\resources\tubes\project" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Pus Kampus\Semester 3\Etc\KBT\src\main\resources\tubes\Abstrak" />
       <recent name="D:\Pus Kampus\Semester 3\Etc\KBT\src\main\resources\tubes\project" />
       <recent name="D:\Pus Kampus\Semester 3\Etc\KBT\src\main\resources" />
     </key>
@@ -58,6 +69,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tubes.project.Main" />
       <module name="project" />
+      <option name="VM_PARAMETERS" value="--module-path C:\src\javafx-sdk-11.0.2\lib --add-modules javafx.controls,javafx.fxml --add-exports javafx.graphics/com.sun.javafx.sg.prism=ALL-UNNAMED " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tubes.project.*" />
@@ -84,8 +96,32 @@
       <updated>1642347748472</updated>
       <workItem from="1642347751134" duration="6302000" />
       <workItem from="1642356694568" duration="995000" />
-      <workItem from="1642357709654" duration="849000" />
+      <workItem from="1642357709654" duration="1057000" />
+      <workItem from="1642387683051" duration="9915000" />
+      <workItem from="1642408974343" duration="595000" />
     </task>
+    <task id="LOCAL-00001" summary="Alpha Build v.0.1.3">
+      <created>1642358690901</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642358690901</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Alpha Build v.0.1.2">
+      <created>1642358734999</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642358734999</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Additional XML file">
+      <created>1642358767802</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642358767802</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,5 +144,9 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/Boading" />
     </ignored-roots>
+    <MESSAGE value="Alpha Build v.0.1.3" />
+    <MESSAGE value="Alpha Build v.0.1.2" />
+    <MESSAGE value="Additional XML file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Additional XML file" />
   </component>
 </project>

@@ -29,5 +29,14 @@ public class PenghuniController {
         stage.show();
 
     }
+    @FXML
+    public void addClicked(ActionEvent event) throws IOException{
+        root = FXMLLoader.load(getClass().getResource("addPenghuni.fxml"));
+        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
 
 }
