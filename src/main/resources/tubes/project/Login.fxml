@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="122.0" prefWidth="189.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tubes.project.SceneController">
+<AnchorPane prefHeight="576.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tubes.project.SceneController">
    <children>
-      <JFXButton layoutX="137.0" layoutY="94.0" onAction="#clickLogin" text="LOGIN" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96989b" height="576.0" stroke="BLACK" strokeType="INSIDE" width="460.0" />
+      <JFXButton layoutX="297.0" layoutY="471.0" onAction="#clickLogin" prefHeight="75.0" prefWidth="130.0" style="-fx-background-color: #FCB415;" text="LOGIN" />
+      <ImageView fitHeight="470.0" fitWidth="467.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Logo-Splash.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="62.0" layoutY="493.0" promptText="Kode Akses" style="-fx-text-inner-color: white;" stylesheets="@stylesheet.css">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>

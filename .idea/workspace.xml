@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="561e5441-a7b9-4b48-903e-c23e80be7207" name="Changes" comment="Additional XML file">
+    <list default="true" id="561e5441-a7b9-4b48-903e-c23e80be7207" name="Changes" comment="Alpha Build v.0.1.2b">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tubes/project/PenghuniController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tubes/project/PenghuniController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/tubes/project/Penghuni.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tubes/project/Penghuni.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/tubes/project/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tubes/project/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tubes/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tubes/project/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tubes/project/addPenghuniController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tubes/project/addPenghuniController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tubes/project/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tubes/project/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tubes/project/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tubes/project/Menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tubes/project/addPenghuni.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tubes/project/addPenghuni.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +100,8 @@
       <workItem from="1642357709654" duration="1057000" />
       <workItem from="1642387683051" duration="9915000" />
       <workItem from="1642408974343" duration="595000" />
+      <workItem from="1642422565935" duration="4412000" />
+      <workItem from="1642480030746" duration="5523000" />
     </task>
     <task id="LOCAL-00001" summary="Alpha Build v.0.1.3">
       <created>1642358690901</created>
@@ -121,7 +124,21 @@
       <option name="project" value="LOCAL" />
       <updated>1642358767802</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Alpha Build v.0.1.2a">
+      <created>1642422716571</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1642422716571</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Alpha Build v.0.1.2b">
+      <created>1642422815760</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642422815760</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +164,8 @@
     <MESSAGE value="Alpha Build v.0.1.3" />
     <MESSAGE value="Alpha Build v.0.1.2" />
     <MESSAGE value="Additional XML file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Additional XML file" />
+    <MESSAGE value="Alpha Build v.0.1.2a" />
+    <MESSAGE value="Alpha Build v.0.1.2b" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alpha Build v.0.1.2b" />
   </component>
 </project>
