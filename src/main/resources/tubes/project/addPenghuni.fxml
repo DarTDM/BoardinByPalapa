@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -9,96 +10,87 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tubes.project.addPenghuniController">
+<AnchorPane id="AnchorPane" prefHeight="530.0" prefWidth="787.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tubes.project.addPenghuniController">
    <children>
-      <Rectangle arcHeight="1.0" arcWidth="1.0" fill="#2c2c2c" height="443.0" stroke="#2c2c2c" strokeType="INSIDE" strokeWidth="5.0" width="700.0" />
-      <Rectangle arcHeight="1.0" arcWidth="1.0" fill="#96989b" height="57.0" layoutX="4.0" layoutY="4.0" stroke="#2c2c2c" strokeType="INSIDE" width="691.0" />
+      <Rectangle arcHeight="1.0" arcWidth="1.0" fill="#2c2c2c" height="546.0" stroke="#2c2c2c" strokeType="INSIDE" strokeWidth="5.0" width="787.0" />
+      <Rectangle arcHeight="1.0" arcWidth="1.0" fill="#96989b" height="57.0" layoutX="4.0" layoutY="4.0" stroke="#2c2c2c" strokeType="INSIDE" width="779.0" />
       <JFXButton layoutX="12.0" layoutY="12.0" onAction="#backclicked" prefHeight="41.0" prefWidth="52.0" style="-fx-background-color: #2c2c2c;" text="BACK" textFill="WHITE" />
-      <Label layoutX="25.0" layoutY="138.0" text="Nama" textFill="WHITE">
+      <Label layoutX="29.0" layoutY="113.0" text="Nama" textFill="WHITE">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="172.0" text="NIK" textFill="WHITE">
+      <Label layoutX="29.0" layoutY="170.0" text="NIK" textFill="WHITE">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <Label layoutX="23.0" layoutY="208.0" text="No. Hp Penghuni" textFill="WHITE">
+      <Label layoutX="26.0" layoutY="222.0" text="No. Hp Penghuni" textFill="WHITE">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <Label layoutX="24.0" layoutY="281.0" text="Asal Kota" textFill="WHITE">
+      <Label layoutX="27.0" layoutY="335.0" text="Asal Daerah" textFill="WHITE">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <Label layoutX="24.0" layoutY="315.0" text="No. Kamar" textFill="WHITE">
+      <Label layoutX="29.0" layoutY="387.0" text="No. Kamar" textFill="WHITE">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <Label layoutX="24.0" layoutY="349.0" text="Status" textFill="WHITE">
+      <Label layoutX="29.0" layoutY="436.0" text="Tanggal Masuk" textFill="WHITE">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <Label layoutX="23.0" layoutY="247.0" text="No. Hp Wali" textFill="WHITE">
+      <Label layoutX="26.0" layoutY="283.0" text="No. Hp Wali" textFill="WHITE">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <TextField layoutX="205.0" layoutY="139.0" style="-fx-text-inner-color: white;" stylesheets="@stylesheet.css">
+      <TextField fx:id="txtNama" layoutX="240.0" layoutY="113.0" promptText="Nama Lengkap" style="-fx-text-inner-color: white;" stylesheets="@stylesheet.css">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </TextField>
-      <TextField layoutX="205.0" layoutY="173.0" style="-fx-text-inner-color: white;" stylesheets="@stylesheet.css">
+      <TextField fx:id="txtNik" layoutX="240.0" layoutY="170.0" prefHeight="32.0" prefWidth="163.0" promptText="16-Digit NIK" style="-fx-text-inner-color: white;" stylesheets="@stylesheet.css">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </TextField>
-      <TextField layoutX="205.0" layoutY="209.0" style="-fx-text-inner-color: white;" stylesheets="@stylesheet.css">
+      <TextField fx:id="txtHP" layoutX="239.0" layoutY="222.0" prefHeight="32.0" prefWidth="132.0" promptText="081234567890" style="-fx-text-inner-color: white;" stylesheets="@stylesheet.css">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </TextField>
-      <TextField layoutX="205.0" layoutY="243.0" style="-fx-text-inner-color: white;" stylesheets="@stylesheet.css">
+      <TextField fx:id="txtWali" layoutX="239.0" layoutY="278.0" prefHeight="32.0" prefWidth="132.0" promptText="081234567890" style="-fx-text-inner-color: white;" stylesheets="@stylesheet.css">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </TextField>
-      <TextField layoutX="205.0" layoutY="282.0" style="-fx-text-inner-color: white;" stylesheets="@stylesheet.css">
+      <TextField fx:id="txtKota" layoutX="239.0" layoutY="335.0" prefHeight="32.0" prefWidth="132.0" promptText="Malang" style="-fx-text-inner-color: white;" stylesheets="@stylesheet.css">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </TextField>
-      <TextField layoutX="205.0" layoutY="316.0" style="-fx-text-inner-color: white;" stylesheets="@stylesheet.css">
+      <TextField fx:id="txtKamar" layoutX="241.0" layoutY="387.0" prefHeight="32.0" prefWidth="95.0" promptText="A01 / 101" style="-fx-text-inner-color: white;" stylesheets="@stylesheet.css">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </TextField>
-      <TextField layoutX="205.0" layoutY="350.0" style="-fx-text-inner-color: white;" stylesheets="@stylesheet.css">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </TextField>
-      <ImageView fitHeight="231.0" fitWidth="238.0" layoutX="438.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="293.0" fitWidth="293.0" layoutX="467.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Logo-Gradient.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="350.0" layoutY="391.0" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #FFBB03;" text="Add" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="281.0" layoutY="391.0" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #FFBB03;" text="Add" textFill="WHITE">
+      <JFXButton fx:id="submit" layoutX="240.0" layoutY="493.0" onAction="#addClicked" prefHeight="29.0" prefWidth="199.0" style="-fx-background-color: #FFBB03;" text="SUBMIT" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </JFXButton>
       <Label alignment="CENTER" layoutX="264.0" layoutY="18.0" prefHeight="29.0" prefWidth="233.0" />
+      <DatePicker fx:id="dateMasuk" layoutX="241.0" layoutY="440.0" prefHeight="26.0" prefWidth="123.0" style="-fx-text-inner-color: black;" />
    </children>
 </AnchorPane>

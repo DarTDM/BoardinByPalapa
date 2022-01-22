@@ -1,4 +1,4 @@
-/*package Helper;
+package Helper;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,4 +14,3 @@ public class DBHelper {
         return DriverManager.getConnection(stringConnection, config.getDbUser(), config.getDbPass());
     }
 }
-*/

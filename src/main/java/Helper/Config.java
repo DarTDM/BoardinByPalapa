@@ -1,4 +1,4 @@
-/*package Helper;
+package Helper;
 
 public class Config {
 
@@ -6,7 +6,7 @@ public class Config {
     private final String dbPort = "3306";
     private final String dbUser = "root";
     private final String dbPass = "";
-    private final String dbName = "c";
+    private final String dbName = "boardin";
 
     public String getDbHost() {
         return dbHost;
@@ -28,4 +28,3 @@ public class Config {
         return dbName;
     }
 }
-*/
