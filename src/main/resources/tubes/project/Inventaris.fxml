@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kbtkos.InventarisController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="410.0" prefWidth="710.0">
+         <children>
+            <Rectangle arcHeight="1.0" arcWidth="1.0" fill="#96989b" height="410.0" stroke="#2c2c2c" strokeType="INSIDE" strokeWidth="5.0" width="710.0" />
+            <HBox layoutX="25.0" layoutY="87.0" prefHeight="30.0" prefWidth="353.0">
+               <children>
+                  <Button id="rnd" fx:id="btnadd" mnemonicParsing="false" onAction="#addclicked" prefHeight="32.0" prefWidth="70.0" stylesheets="@../gambar/stylesheet.css" text="+ Add" />
+                  <Button id="rnd" fx:id="btnsearch" mnemonicParsing="false" onAction="#searchclicked" prefHeight="32.0" prefWidth="70.0" stylesheets="@../gambar/stylesheet.css" text="Search" />
+                  <Button id="rnd" fx:id="btnsave" mnemonicParsing="false" onAction="#saveclicked" prefHeight="32.0" prefWidth="70.0" stylesheets="@../gambar/stylesheet.css" text="Save CSV" />
+                  <Button id="rnd" fx:id="btnedit" mnemonicParsing="false" onAction="#editclicked" prefHeight="32.0" prefWidth="70.0" stylesheets="@../gambar/stylesheet.css" text="Edit" />
+                  <Button id="rnd" fx:id="btndelete" mnemonicParsing="false" onAction="#deleteclicked" prefHeight="32.0" prefWidth="70.0" stylesheets="@../gambar/stylesheet.css" text="Delete" />
+               </children>
+            </HBox>
+            <TableView layoutX="25.0" layoutY="137.0" prefHeight="240.0" prefWidth="650.0">
+               <columns>
+                  <TableColumn prefWidth="268.8000297546387" text="Nama" />
+                  <TableColumn prefWidth="114.39996337890625" text="Jumlah" />
+                  <TableColumn prefWidth="102.4000244140625" text="Status" />
+                  <TableColumn prefWidth="164.7999267578125" text="Merk" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnkembali" layoutX="25.0" layoutY="20.0" mnemonicParsing="false" onAction="#backmenu" text="Kembali" />
+            <Label layoutX="289.0" layoutY="22.0" text="Inventaris">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -12,9 +12,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -26,50 +26,32 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
-public class PenghuniController {
+public class editPenghuniController {
 
+    private final Alert alertWarning = new Alert(Alert.AlertType.WARNING);
+    private final Alert alertInformation = new Alert(Alert.AlertType.INFORMATION);
+
+    private Connection connection;
+    private boardin.penghuni penghuni;
+    private PreparedStatement preparedStatement;
 
     private Stage stage;
     private Scene scene;
     private Parent root;
 
-    private ObservableList<penghuni> listOfpenghuni = FXCollections.observableArrayList();
-    Connection connection;
-
-    private Alert alertInformation = new Alert(Alert.AlertType.INFORMATION);
+    private ObservableList<penghuni> listOfpenghuni;
 
     @FXML
-    private Button btnback;
+    private TextField txtHP;
 
     @FXML
-    public void backclicked(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Menu.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-    }
-    @FXML
-    public void addClicked(ActionEvent event) throws IOException{
-        root = FXMLLoader.load(getClass().getResource("addPenghuni.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-    }
-    @FXML
-    public void editClicked(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("editPenghuni.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
+    private TextField txtWali;
 
     @FXML
-    private JFXButton buttonDelete;
+    private TextField txtKamar;
+
+    @FXML
+    private JFXButton updateButton;
 
     @FXML
     private TableView<penghuni> tblShowPenghuni;
@@ -95,10 +77,9 @@ public class PenghuniController {
     @FXML
     private TableColumn<penghuni, LocalDate> tanggalCol;
 
+
     @FXML
     void initialize() throws SQLException, ClassNotFoundException {
-        buttonDelete.setDisable(true);
-
         DBHelper dbHelper = new DBHelper();
         connection = dbHelper.getConnection();
 
@@ -117,55 +98,68 @@ public class PenghuniController {
 
     }
 
-    @FXML
-    void deleteClicked(ActionEvent event) throws SQLException{
-        ObservableList<penghuni> allPenghuni, selectedPenghuni;
+    public void editClicked(ActionEvent event) throws SQLException {
+        boolean resultTrue = isTextFieldCorrect(txtHP, txtWali, txtKamar);
 
-        allPenghuni = tblShowPenghuni.getItems();
-        selectedPenghuni = tblShowPenghuni.getSelectionModel().getSelectedItems();
-        Integer selectedId = getIdpenghuni(selectedPenghuni);
-        String selectedNama = getNamapenghuni(selectedPenghuni);
+        if (resultTrue) {
+            alertWarning.setTitle("Warning!!!");
+            alertWarning.setHeaderText(null);
+            alertWarning.setContentText("Textfield tidak boleh kosong!!");
 
-        selectedPenghuni.forEach(allPenghuni::remove);
+            alertWarning.showAndWait();
 
-        alertInformation.setTitle("Delete Success!!");
+    } else {
+
+
+        String query = "UPDATE tblpenghuni set nomorhp = ?, nomorwali = ? , nomorkamar = ? where idpenghuni = ?";
+
+        int id = penghuni.getIdSC();
+        String nomorHP = txtHP.getText();
+        String nomorWali = txtWali.getText();
+        String nomorKamar = txtKamar.getText();
+
+        alertInformation.setTitle("Update Sukses!!!");
         alertInformation.setHeaderText(null);
-        alertInformation.setContentText(selectedNama + " berhasil dihapus!");
+        alertInformation.setContentText("Data berhasil diubah!!");
 
         alertInformation.showAndWait();
 
+        tblShowPenghuni.refresh();
         tblShowPenghuni.getSelectionModel().select(null);
 
-        String query = "DELETE FROM tblpenghuni WHERE idpenghuni = ?";
+        txtKamar.clear();
+        txtWali.clear();
+        txtHP.clear();
+
+        txtHP.setDisable(true);
+        txtKamar.setDisable(true);
+        txtWali.setDisable(true);
+        updateButton.setDisable(true);
 
         PreparedStatement preparedStatement = connection.prepareStatement(query);
-        preparedStatement.setInt(1, selectedId);
-        preparedStatement.execute();
+        preparedStatement.setString(1, nomorHP);
+        preparedStatement.setString(2, nomorWali);
+        preparedStatement.setString(3, nomorKamar);
+        preparedStatement.setInt(4, id);
+        preparedStatement.executeUpdate();
+        preparedStatement.close();
 
+        listOfpenghuni = readDB(connection);
+        tblShowPenghuni.setItems(listOfpenghuni);
+    }
+}
+
+
+
+    private boolean isTextFieldCorrect(TextField txtHP, TextField txtWali, TextField txtKamar) {
+        return isTextFieldEmpty(txtHP) || isTextFieldEmpty(txtWali) || isTextFieldEmpty(txtKamar);
     }
 
-    @FXML
-    void onTblShowPenghuniClicked(MouseEvent event) {
-        buttonDelete.setDisable(false);
+    private boolean isTextFieldEmpty(TextField textField) {
+        return textField.getText().equals("");
     }
 
-    private String getNamapenghuni(ObservableList<penghuni> observableList) {
-        String namaSC = "";
-        for (penghuni Penghuni : observableList){
-            namaSC = Penghuni.getNamaSC();
-        }
-        return namaSC;
-    }
-
-    private Integer getIdpenghuni(ObservableList<penghuni> observableList) {
-        Integer selectedId = null;
-        for (penghuni Penghuni : observableList) {
-            selectedId = Penghuni.getIdSC();
-        }
-        return selectedId;
-    }
-
-    public static ObservableList<penghuni> readDB(Connection connection) throws SQLException {
+    private ObservableList<penghuni> readDB(Connection connection) throws SQLException {
         String query = "SELECT * FROM tblpenghuni";
 
         PreparedStatement preparedStatement = connection.prepareStatement(query);
@@ -174,6 +168,7 @@ public class PenghuniController {
 
         while (resultSet.next()) {
             penghuni Penghuni = new penghuni(
+
                     resultSet.getString("nama"),
                     resultSet.getString("nik"),
                     resultSet.getString("nomorhp"),
@@ -188,4 +183,24 @@ public class PenghuniController {
         return allPenghuni;
     }
 
+    public void onTableClicked(MouseEvent event) {
+        penghuni = tblShowPenghuni.getSelectionModel().getSelectedItem();
+
+        txtHP.setDisable(false);
+        txtKamar.setDisable(false);
+        txtWali.setDisable(false);
+        updateButton.setDisable(false);
+
+        txtHP.setText(String.valueOf(penghuni.getNomorhpSC()));
+        txtKamar.setText(String.valueOf(penghuni.getNomorkamarSC()));
+        txtWali.setText(String.valueOf(penghuni.getNomorwaliSC()));
+    }
+
+    public void backclicked(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("Penghuni.fxml"));
+        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

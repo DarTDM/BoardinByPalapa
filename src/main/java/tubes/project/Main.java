@@ -17,7 +17,7 @@ public class Main extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setResizable(false);
         stage.getIcons().add(new Image("tubes/project/Icon.png"));
-        stage.setTitle("Boardin' By Palapa (Alpha Build v.0.1.2b)");
+        stage.setTitle("Boardin' By Palapa (Alpha Build v.0.1.2c)");
         stage.setScene(scene);
         stage.show();
     }

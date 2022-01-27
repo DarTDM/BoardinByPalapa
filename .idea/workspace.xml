@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="561e5441-a7b9-4b48-903e-c23e80be7207" name="Changes" comment="Alpha Build v.0.1.2b">
+    <list default="true" id="561e5441-a7b9-4b48-903e-c23e80be7207" name="Changes" comment="Alpha Build v.0.2.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tubes/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tubes/project/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tubes/project/PenghuniController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tubes/project/PenghuniController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tubes/project/addPenghuniController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tubes/project/addPenghuniController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/tubes/project/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tubes/project/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/tubes/project/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tubes/project/Menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/tubes/project/addPenghuni.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tubes/project/addPenghuni.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tubes/project/Penghuni.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tubes/project/Penghuni.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,14 +23,23 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
-        <option value="Class" />
         <option value="module-info" />
+        <option value="CSS File" />
+        <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -45,10 +54,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/tubes/project" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15234375" />
     <property name="project.structure.side.proportion" value="0.2674572" />
@@ -102,6 +113,16 @@
       <workItem from="1642408974343" duration="595000" />
       <workItem from="1642422565935" duration="4412000" />
       <workItem from="1642480030746" duration="5523000" />
+      <workItem from="1642496751546" duration="1273000" />
+      <workItem from="1642498834801" duration="125000" />
+      <workItem from="1642514901094" duration="10090000" />
+      <workItem from="1642571593196" duration="3344000" />
+      <workItem from="1642681545924" duration="1310000" />
+      <workItem from="1642754667987" duration="1652000" />
+      <workItem from="1642855483343" duration="1355000" />
+      <workItem from="1642856876287" duration="2557000" />
+      <workItem from="1642860255650" duration="625000" />
+      <workItem from="1643198791718" duration="14681000" />
     </task>
     <task id="LOCAL-00001" summary="Alpha Build v.0.1.3">
       <created>1642358690901</created>
@@ -138,7 +159,21 @@
       <option name="project" value="LOCAL" />
       <updated>1642422815760</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Alpha Build v.0.1.2c">
+      <created>1642496956565</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1642496956565</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Alpha Build v.0.2.0">
+      <created>1642859242825</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1642859242825</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +201,8 @@
     <MESSAGE value="Additional XML file" />
     <MESSAGE value="Alpha Build v.0.1.2a" />
     <MESSAGE value="Alpha Build v.0.1.2b" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alpha Build v.0.1.2b" />
+    <MESSAGE value="Alpha Build v.0.1.2c" />
+    <MESSAGE value="Alpha Build v.0.2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alpha Build v.0.2.0" />
   </component>
 </project>

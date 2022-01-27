@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="kbtkos.KostController">
+   <children>
+      <Rectangle fill="#2c2c2c" height="400.0" stroke="BLACK" strokeType="INSIDE" width="700.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96989b" height="69.0" layoutX="10.0" layoutY="9.0" stroke="BLACK" strokeType="INSIDE" width="684.0" />
+      <Button layoutX="22.0" layoutY="23.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="70.0" text="Menu" />
+      <Label layoutX="112.0" layoutY="24.0" prefHeight="18.0" prefWidth="196.0" text="Detail Kost" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96989b" height="313.0" layoutX="10.0" layoutY="78.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#fcb415" height="48.0" layoutX="23.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
+      <Label layoutX="32.0" layoutY="100.0" prefHeight="27.0" prefWidth="165.0" text="DETAIL PENGHUNI">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="23.0" layoutY="157.0" promptText="Nama" />
+      <TextField layoutX="23.0" layoutY="200.0" promptText="NIK" />
+      <TextField layoutX="23.0" layoutY="241.0" promptText="No. HP" />
+      <TextField layoutX="23.0" layoutY="281.0" promptText="Kota Asal" />
+      <Button layoutX="230.0" layoutY="100.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="100.0" style="-fx-background-color: #fcb415;" text="101" />
+      <Button layoutX="340.0" layoutY="100.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="100.0" style="-fx-background-color: #fcb415;" text="102" />
+      <Button layoutX="450.0" layoutY="100.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="100.0" style="-fx-background-color: #fcb415;" text="103" />
+      <Button layoutX="560.0" layoutY="100.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="100.0" style="-fx-background-color: #fcb415;" text="104" />
+      <Button layoutX="230.0" layoutY="200.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="100.0" style="-fx-background-color: #fcb415;" text="105" />
+      <Button layoutX="340.0" layoutY="200.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="100.0" style="-fx-background-color: #fcb415;" text="106" />
+      <Button layoutX="450.0" layoutY="200.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="100.0" style="-fx-background-color: #fcb415;" text="107" />
+      <Button layoutX="560.0" layoutY="200.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="100.0" style="-fx-background-color: #fcb415;" text="108" />
+      <Button layoutX="230.0" layoutY="300.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="100.0" style="-fx-background-color: #fcb415;" text="109" />
+      <Button layoutX="340.0" layoutY="300.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="100.0" style="-fx-background-color: #fcb415;" text="110" />
+      <Button layoutX="450.0" layoutY="300.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="100.0" style="-fx-background-color: #fcb415;" text="111" />
+      <Button layoutX="560.0" layoutY="300.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="100.0" style="-fx-background-color: #fcb415;" text="112" />
+      <Label layoutX="270.0" layoutY="160.0" text="PREMIUM" />
+      <Label layoutX="380.0" layoutY="160.0" text="PREMIUM" />
+      <Label layoutX="490.0" layoutY="160.0" text="PREMIUM" />
+      <Label layoutX="600.0" layoutY="160.0" text="PREMIUM" />
+      <Label layoutX="270.0" layoutY="260.0" text="REGULAR" />
+      <Label layoutX="380.0" layoutY="260.0" text="REGULAR" />
+      <Label layoutX="490.0" layoutY="260.0" text="REGULAR" />
+      <Label layoutX="600.0" layoutY="260.0" text="REGULAR" />
+      <Label layoutX="270.0" layoutY="360.0" text="REGULAR" />
+      <Label layoutX="380.0" layoutY="360.0" text="REGULAR" />
+      <Label layoutX="490.0" layoutY="260.0" text="REGULAR" />
+      <Label layoutX="490.0" layoutY="360.0" text="REGULAR" />
+      <Label layoutX="600.0" layoutY="360.0" text="REGULAR" />
+   </children>
+</AnchorPane>

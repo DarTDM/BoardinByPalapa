@@ -25,7 +25,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #FCB415;" text="Edit" textFill="WHITE">
+            <JFXButton onAction="#editClicked" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #FCB415;" text="Edit" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
@@ -33,7 +33,7 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </JFXButton>
-            <JFXButton prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #FCB415;" text="Delete" textFill="WHITE">
+            <JFXButton fx:id="buttonDelete" onAction="#deleteClicked" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #FCB415;" text="Delete" textFill="WHITE">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
@@ -51,13 +51,13 @@
             </JFXButton>
          </children>
       </HBox>
-      <TableView fx:id="tblShowPenghuni" layoutX="25.0" layoutY="134.0" prefHeight="240.0" prefWidth="662.0" style="-fx-background-color: #96989B;">
+      <TableView fx:id="tblShowPenghuni" layoutX="25.0" layoutY="134.0" onMouseClicked="#onTblShowPenghuniClicked" prefHeight="240.0" prefWidth="662.0" style="-fx-background-color: #96989B;">
         <columns>
           <TableColumn fx:id="namaCol" prefWidth="124.79999351501465" text="Nama" />
           <TableColumn fx:id="nikCol" prefWidth="130.4000244140625" text="NIK" />
             <TableColumn fx:id="hpCol" prefWidth="92.0" text="No. HP" />
             <TableColumn fx:id="waliCol" prefWidth="101.0" text="No. Wali" />
-            <TableColumn fx:id="kotaCol" minWidth="0.0" prefWidth="79.0" text="Asal Kota" />
+            <TableColumn fx:id="kotaCol" minWidth="0.0" prefWidth="79.0" text="Asal Daerah" />
             <TableColumn fx:id="kamarCol" prefWidth="62.0" text="Kamar" />
             <TableColumn fx:id="tanggalCol" minWidth="0.0" prefWidth="70.0" text="Tanggal" />
         </columns>
