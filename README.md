@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="https://cdn.discordapp.com/attachments/859690724550508546/937586329380880434/Logo-BoardinSHADOW.png">
+    <img src="https://cdn.discordapp.com/attachments/859690724550508546/937720556067901530/Logo-BoardinWide.png">
 </h1>
 
 <h1><b>Program Description</b></h1>
