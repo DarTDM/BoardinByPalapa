@@ -11,11 +11,11 @@
 <AnchorPane id="AnchorPane" prefHeight="394.0" prefWidth="412.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tubes.project.MenuController">
    <children>
       <Rectangle fill="#96989b" height="393.0" layoutX="-1.0" layoutY="1.0" stroke="#2c2c2c" strokeType="INSIDE" strokeWidth="10.0" width="689.0" />
-      <JFXButton layoutX="436.0" layoutY="102.0" prefHeight="118.0" prefWidth="213.0" style="-fx-background-color: #FCB415;" text="Button" />
+      <JFXButton layoutX="436.0" layoutY="102.0" onAction="#paymentclicked" prefHeight="118.0" prefWidth="213.0" style="-fx-background-color: #FCB415;" />
       <JFXButton layoutX="436.0" layoutY="234.0" prefHeight="118.0" prefWidth="213.0" style="-fx-background-color: #FCB415;" />
-      <JFXButton layoutX="229.0" layoutY="234.0" prefHeight="118.0" prefWidth="200.0" style="-fx-background-color: #FCB415;" />
-      <JFXButton layoutX="19.0" layoutY="234.0" prefHeight="118.0" prefWidth="200.0" style="-fx-background-color: #FCB415;" />
-      <JFXButton layoutX="19.0" layoutY="102.0" prefHeight="118.0" prefWidth="200.0" style="-fx-background-color: #FCB415;" />
+      <JFXButton layoutX="229.0" layoutY="234.0" onAction="#balanceclicked" prefHeight="118.0" prefWidth="200.0" style="-fx-background-color: #FCB415;" />
+      <JFXButton layoutX="19.0" layoutY="234.0" onAction="#stockclicked" prefHeight="118.0" prefWidth="200.0" style="-fx-background-color: #FCB415;" />
+      <JFXButton layoutX="19.0" layoutY="102.0" onAction="#kostclicked" prefHeight="118.0" prefWidth="200.0" style="-fx-background-color: #FCB415;" />
       <JFXButton fx:id="btnpenghuni" layoutX="229.0" layoutY="102.0" onAction="#penghuniclicked" prefHeight="118.0" prefWidth="200.0" style="-fx-background-color: #FCB415;" />
       <ImageView fitHeight="58.0" fitWidth="72.0" layoutX="30.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
          <image>

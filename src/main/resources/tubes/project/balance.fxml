@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="313.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kbt.BalanceController">
+<AnchorPane id="AnchorPane" prefHeight="313.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tubes.project.BalanceController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96989b" height="400.0" layoutY="-1.0" stroke="#2c2c2c" strokeType="INSIDE" strokeWidth="5.0" width="700.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcb415" height="132.0" layoutX="73.0" layoutY="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="554.0" />
@@ -40,7 +40,7 @@
       <TableView fx:id="tabelRiwayat" layoutX="82.0" layoutY="242.0" prefHeight="132.0" prefWidth="296.0">
         <columns>
           <TableColumn fx:id="Keterangan" prefWidth="121.0" text="Keterangan" />
-          <TableColumn fx:id="Tanggal" prefWidth="100.0" text="Tanggal" />
+          <TableColumn fx:id="tgl" prefWidth="100.0" text="Tanggal" />
             <TableColumn fx:id="uangPemasukan" text="Rp" />
         </columns>
       </TableView>

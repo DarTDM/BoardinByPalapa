@@ -35,7 +35,12 @@ public class MenuController {
     private Scene scene;
     private Parent root;
 
-    public void kostclicked(ActionEvent actionEvent) {
+    public void kostclicked(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("Kost.fxml"));
+        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void penghuniclicked(ActionEvent event) throws IOException {
@@ -46,16 +51,32 @@ public class MenuController {
         stage.show();
     }
 
-    public void paymentclicked(ActionEvent actionEvent) {
+    public void paymentclicked(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("payment.fxml"));
+        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
-    public void stockclicked(ActionEvent actionEvent) {
+    public void stockclicked(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("Inventaris.fxml"));
+        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
-    public void balanceclicked(ActionEvent actionEvent) {
+    public void balanceclicked(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("balance.fxml"));
+        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void historyclicked(ActionEvent actionEvent) {
+
     }
 
     public void clickLogout(ActionEvent event)throws IOException {

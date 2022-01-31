@@ -41,7 +41,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #FCB415;" text="Export" textFill="WHITE">
+            <JFXButton onAction="#exportClicked" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #FCB415;" text="Export" textFill="WHITE">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>

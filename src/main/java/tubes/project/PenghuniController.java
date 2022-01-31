@@ -16,10 +16,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -29,71 +32,85 @@ import java.time.LocalDate;
 public class PenghuniController {
 
 
+    Connection connection;
     private Stage stage;
     private Scene scene;
     private Parent root;
-
     private ObservableList<penghuni> listOfpenghuni = FXCollections.observableArrayList();
-    Connection connection;
-
     private Alert alertInformation = new Alert(Alert.AlertType.INFORMATION);
 
     @FXML
     private Button btnback;
+    @FXML
+    private JFXButton buttonDelete;
+    @FXML
+    private TableView<penghuni> tblShowPenghuni;
+    @FXML
+    private TableColumn<penghuni, String> namaCol;
+    @FXML
+    private TableColumn<penghuni, String> nikCol;
+    @FXML
+    private TableColumn<penghuni, String> hpCol;
+    @FXML
+    private TableColumn<penghuni, String> waliCol;
+    @FXML
+    private TableColumn<penghuni, String> kotaCol;
+    @FXML
+    private TableColumn<penghuni, String> kamarCol;
+    @FXML
+    private TableColumn<penghuni, LocalDate> tanggalCol;
+
+    public static ObservableList<penghuni> readDB(Connection connection) throws SQLException {
+        String query = "SELECT * FROM tblpenghuni";
+
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        ObservableList<penghuni> allPenghuni = FXCollections.observableArrayList();
+
+        while (resultSet.next()) {
+            penghuni Penghuni = new penghuni(
+                    resultSet.getString("nama"),
+                    resultSet.getString("nik"),
+                    resultSet.getString("nomorhp"),
+                    resultSet.getString("nomorwali"),
+                    resultSet.getString("kota"),
+                    resultSet.getString("nomorkamar"),
+                    resultSet.getDate("tanggal"),
+                    resultSet.getInt("idpenghuni"));
+            allPenghuni.add(Penghuni);
+        }
+
+        return allPenghuni;
+    }
 
     @FXML
     public void backclicked(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("Menu.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
 
     }
+
     @FXML
-    public void addClicked(ActionEvent event) throws IOException{
+    public void addClicked(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("addPenghuni.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
 
     }
+
     @FXML
     public void editClicked(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("editPenghuni.fxml"));
-        stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
-
-    @FXML
-    private JFXButton buttonDelete;
-
-    @FXML
-    private TableView<penghuni> tblShowPenghuni;
-
-    @FXML
-    private TableColumn<penghuni, String> namaCol;
-
-    @FXML
-    private TableColumn<penghuni, String> nikCol;
-
-    @FXML
-    private TableColumn<penghuni, String> hpCol;
-
-    @FXML
-    private TableColumn<penghuni, String> waliCol;
-
-    @FXML
-    private TableColumn<penghuni, String> kotaCol;
-
-    @FXML
-    private TableColumn<penghuni, String> kamarCol;
-
-    @FXML
-    private TableColumn<penghuni, LocalDate> tanggalCol;
 
     @FXML
     void initialize() throws SQLException, ClassNotFoundException {
@@ -118,7 +135,7 @@ public class PenghuniController {
     }
 
     @FXML
-    void deleteClicked(ActionEvent event) throws SQLException{
+    void deleteClicked(ActionEvent event) throws SQLException {
         ObservableList<penghuni> allPenghuni, selectedPenghuni;
 
         allPenghuni = tblShowPenghuni.getItems();
@@ -151,7 +168,7 @@ public class PenghuniController {
 
     private String getNamapenghuni(ObservableList<penghuni> observableList) {
         String namaSC = "";
-        for (penghuni Penghuni : observableList){
+        for (penghuni Penghuni : observableList) {
             namaSC = Penghuni.getNamaSC();
         }
         return namaSC;
@@ -165,27 +182,58 @@ public class PenghuniController {
         return selectedId;
     }
 
-    public static ObservableList<penghuni> readDB(Connection connection) throws SQLException {
-        String query = "SELECT * FROM tblpenghuni";
+    @FXML
+    void exportClicked(ActionEvent event) {
 
-        PreparedStatement preparedStatement = connection.prepareStatement(query);
-        ResultSet resultSet = preparedStatement.executeQuery();
-        ObservableList<penghuni> allPenghuni = FXCollections.observableArrayList();
+        alertInformation.setTitle("Export Sukses!!");
+        alertInformation.setHeaderText(null);
+        alertInformation.setContentText("Data Penghuni berhasi di export");
 
-        while (resultSet.next()) {
-            penghuni Penghuni = new penghuni(
-                    resultSet.getString("nama"),
-                    resultSet.getString("nik"),
-                    resultSet.getString("nomorhp"),
-                    resultSet.getString("nomorwali"),
-                    resultSet.getString("kota"),
-                    resultSet.getString("nomorkamar"),
-                    resultSet.getDate("tanggal"),
-                    resultSet.getInt("idpenghuni"));
-            allPenghuni.add(Penghuni);
+
+        alertInformation.showAndWait();
+
+        try {
+            PrintWriter pw = new PrintWriter(
+                    new File("D:\\Pus Kampus\\Semester 3\\Etc\\KBT\\src\\main\\rekapitulasi\\" +
+                            "DataPenghuniNEW.csv"));
+            StringBuilder sb = new StringBuilder();
+
+
+            Connection connection = null;
+            DBHelper obj_DB_Connection = new DBHelper();
+            connection = obj_DB_Connection.getConnection();
+            ResultSet rs = null;
+
+            String query = "select * from tblpenghuni";
+            PreparedStatement ps = connection.prepareStatement(query);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                sb.append(rs.getString("nama"));
+                sb.append(",");
+                sb.append(rs.getString("nik"));
+                sb.append(",");
+                sb.append(rs.getString("nomorhp"));
+                sb.append(",");
+                sb.append(rs.getString("nomorwali"));
+                sb.append(",");
+                sb.append(rs.getString("nomorkamar"));
+                sb.append(",");
+                sb.append(rs.getString("kota"));
+                sb.append(",");
+                sb.append(rs.getDate("tanggal"));
+                sb.append("\r\n");
+
+            }
+
+            pw.write(sb.toString());
+            pw.close();
+
+
+
+        } catch (Exception e) {
+
         }
-
-        return allPenghuni;
     }
 
 }

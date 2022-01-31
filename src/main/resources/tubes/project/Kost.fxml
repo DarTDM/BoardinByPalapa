@@ -7,12 +7,11 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="kbtkos.KostController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tubes.project.KostController">
    <children>
       <Rectangle fill="#2c2c2c" height="400.0" stroke="BLACK" strokeType="INSIDE" width="700.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96989b" height="69.0" layoutX="10.0" layoutY="9.0" stroke="BLACK" strokeType="INSIDE" width="684.0" />
-      <Button layoutX="22.0" layoutY="23.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="70.0" text="Menu" />
+      <Button layoutX="22.0" layoutY="23.0" mnemonicParsing="false" onAction="#backclicked" prefHeight="36.0" prefWidth="70.0" text="Menu" />
       <Label layoutX="112.0" layoutY="24.0" prefHeight="18.0" prefWidth="196.0" text="Detail Kost" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
          <font>
             <Font size="24.0" />
