@@ -1,13 +1,12 @@
 Version Build
 -Alpha Build
 
-    v.0.1.1 Pembuatan Dasar Project.
-    v.0.1.2 Push Project Ke Github.
-    v.0.1.2a Fix Misalignment FXML & Controller Name.
-    v.0.1.2b Adding Title And Icon For Apps, And Disable Resizable.
-    v.0.1.2c Updating FXML Logo&Icon.
-    v.0.2.0 Adding Database Config & Create Function.
-    v.0.2.1 Edit&Delete Function is now Online.
-    v.0.2.2 Export to CSV now available.
-    v.0.2.3 Adding new Controller to each of FXML file.
-    v.0.2.3a Adding Changelog Files.
+    v.0.1.1     Making Project Base.
+    v.0.1.2     Push Project To Github.
+    v.0.1.2a    Fix Misalignment FXML & Controller Name.
+    v.0.1.2b    Adding Title And Icon For Apps, And Disable Resizable.
+    v.0.1.2c    Updating FXML Logo&Icon.
+    v.0.2.0     Adding Database Config & Create Function.
+    v.0.2.1     Edit&Delete Function is now Online.
+    v.0.2.2     Export to CSV now available.
+    v.0.2.3     Adding new Controller to each of FXML file and Changelog
