@@ -19,5 +19,22 @@ We make this application because owner of boarding house usually collecting data
     - [JDBC MySQL Connector](https://dev.mysql.com/downloads/connector/j/)
         <p>JDBC we're use for the connection between the Project and the Database we owns locally.</p>
   
-- Installation
-    - 
+<h1><b>Installation</h1></b>
+
+In Installation, we must get the plugin first to run the projects Via IDE, because it's not final yet, and we dont have time to build the artifact of the project.
+
+<h1><b>Configuration</h1></b>
+
+- [JavaFX on IntellIJ](https://www.jetbrains.com/help/idea/discover-intellij-idea.html)
+- [JFoenix Configuration](https://github.com/sshahine/JFoenix)
+- [Importing MySQL Database](https://www.digitalocean.com/community/tutorials/how-to-import-and-export-databases-in-mysql-or-mariadb)
+
+<h1><b>Copyright</b></h1>
+
+- <b>Palapa Enterprise</b>
+    - [Ahmad Chaidar Isat](https://github.com/XYZCurrate86)
+    - [Kholilul Rohman](https://github.com/khoumann)
+    - [Muhammad Taufikurrohman](https://github.com/Taufikur28)
+- Kewirausahaan Berbasis Teknologi
+- Universitas Muhammadiyah Malang
+- Syaifuddin,.S.Kom,.M.Kom
