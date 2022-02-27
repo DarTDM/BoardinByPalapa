@@ -35,6 +35,3 @@ In Installation, we must get the plugin first to run the projects Via IDE, becau
     - [Ahmad Chaidar Isat 2020-525](https://github.com/XYZCurrate86)
     - [Kholilul Rohman 2020-518](https://github.com/khoumann)
     - [Muhammad Taufikurrohman 2020-499](https://github.com/Taufikur28)
-- Kewirausahaan Berbasis Teknologi
-- Universitas Muhammadiyah Malang
-- Syaifuddin,.S.Kom,.M.Kom as Lecturer
